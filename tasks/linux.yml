@@ -1,7 +1,7 @@
 ---
 - name: Set base install command
   ansible.builtin.set_fact:
-    install_command: /usr/local/bin/newrelic install -y
+    install_command: sudo --preserve env /usr/local/bin/newrelic install -y
 
 - name: Build full install command
   ansible.builtin.import_tasks: build_command.yml
